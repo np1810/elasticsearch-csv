@@ -34,7 +34,7 @@ else if (isset($_GET["district"]) && !empty($_GET["district"]))
 else if (isset($_GET["q"]) && !empty($_GET["q"]))
 {
 	$q = htmlspecialchars($_GET["q"]);
-	
+	$client = $es->getClient();
 	$searchParams = ['index'=>'data','type'=>'pin','q'=>$q];
 	if (is_null($client)) {
 		$res["error"] = "Exception Occurred!";

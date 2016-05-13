@@ -3,6 +3,8 @@
 
 This application imports Indian Pincode's CSV to Elasticsearch using Logstash, uses Elasticsearch as data storage along with elasticsearch PHP API.
 
+#### [Click Here for Demo](http://13.67.60.167/apiv1/search?pretty&q=248001) _**Link would work only when ElasticSearch Service is running on the server**_
+
 ### An Pincode API end-point / route for searching / filtering the data set on parameters like -
 - district
 - state
@@ -68,14 +70,15 @@ export LS_HEAP_SIZE=512M # LogsTash Heap Size
 * Now run the **ElasticSearch** by -
 
 ```sh
-cd /path/to/ElasticSearch
-sh bin/elasticsearch
+$ cd /path/to/ElasticSearch
+$ sh bin/elasticsearch
 ```
 
 * Creating a new index named "data" in your nodes.
 
+```sh
+$ curl -XPUT localhost:9200/data
 ```
-curl -XPUT localhost:9200/data
 
 * Extract **logstash\*.tar.gz**
 

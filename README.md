@@ -1,4 +1,4 @@
-# ElasticSearch Pincode w/ PHP API
+# ElasticSearch Pincode with PHP API
 ---
 
 This application imports Indian Pincode's CSV to Elasticsearch using Logstash, uses Elasticsearch as data storage along with elasticsearch PHP API.
